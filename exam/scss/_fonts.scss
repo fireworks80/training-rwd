@@ -1,0 +1,38 @@
+$path-font: '../fonts/';
+$names-font: ('Thin': 100, 'Regular': 400, 'Medium': 500, 'Bold': 700);
+
+@each $name, $weight in $names-font {
+  @font-face {
+    font-family: 'Roboto';
+    src: url($path-font + 'Roboto-' + $name + '.ttf') format('truetype');
+    font-style: normal;
+    font-weight: $weight;
+  }
+}
+
+// @font-face {
+//   font-family: 'Roboto'
+//   src: url('../fonts/Roboto-Thin.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: 100;
+// }
+
+// @font-face {
+//   font-family: 'Roboto'
+//   src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: 400;
+// }
+
+// @font-face {
+//   font-family: 'Roboto'
+//   src: url('../fonts/Roboto-Medium.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: 500;
+// }
+// @font-face {
+//   font-family: 'Roboto'
+//   src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+//   font-style: normal;
+//   font-weight: 700;
+// }
