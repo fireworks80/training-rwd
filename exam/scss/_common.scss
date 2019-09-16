@@ -1,7 +1,23 @@
+html { 
+  font-size: (10px / 16px * 100%);
+}
+
 body {
-    font: normal 400 12px/1 'Roboto', sans-serif;
+  font-family: $font-roboto;
+  line-height: 1;
 }
 
 a {
     text-decoration: none;
+}
+
+// ===============================
+// util
+// ===============================
+.a11y {
+    @include a11y;
+}
+
+.debug {
+    @include debug;
 }

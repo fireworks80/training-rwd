@@ -1,0 +1,37 @@
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute($args...) {
+  @include position(absolute, $args...)
+}
+
+@mixin fixed($args...) {
+  @include position(fixed, $args...)
+}
+
+@mixin relative($args...) {
+  @include position(relative, $args...)
+}
+
+@mixin a11y {
+  @include absolute($top: auto, $left: -9999em);
+  @include size(1px);
+
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+}
+
+@mixin debug($style: dashed, $color: red) {
+  outline: 1px $style $color;
+}
